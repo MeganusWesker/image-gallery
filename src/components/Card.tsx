@@ -12,7 +12,7 @@ const Card = ({
   index,
   height,
 }: ICardProps) => {
-
+  
   return (
     <div className="cardContainer" onClick={()=>selectCard(index)}   style={{
       gridColumnEnd: 'span 1', 
