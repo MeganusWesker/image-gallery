@@ -1,0 +1,132 @@
+.popUpContainer{
+    position: fixed;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 80vh;
+    width: 60%;
+    z-index: 10;
+    top: 10px;
+    left:20%;
+}
+
+.closebtn{
+    position: absolute;
+    z-index: 12;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px;
+    right: -12px;
+    top: -12px;
+    background-color: rgb(249, 249, 249,0.7)
+}
+
+
+
+.popUpconatinerImg{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+}
+
+.popUpContainerSecondMain{
+    background-color: var( --popUpcolor);
+    padding: 7px;
+    margin-top: -5px;
+}
+
+.popUpContainerSecond{
+   justify-content: space-between;
+}
+
+.popUpContainerLeft img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.socials{
+    margin-left: 5px;
+
+}
+
+.socials svg{
+    color: rgb(113 112 112 / 70%);
+
+}
+
+.socials p{
+   color: rgb(113 112 112 / 70%);
+
+} 
+
+.socials svg{
+    width: 30px;
+    height: 30px;
+ 
+}
+
+/* userName div */
+.popUpContainerLeft div{
+   margin-left: 7px;
+}
+
+
+
+.popUpContainerRight{
+    padding: 4px;
+}
+
+.popUpContainerRight button{ 
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+ }
+ 
+
+.popUpContainerRight svg{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  color: var( --mainColor1);
+}
+
+.popUpConatinerthird{
+    margin-top: 5px;
+}
+
+.tagWrapper{
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagsContainer{
+    padding: 5px;
+    background-color: var(--color2);
+    margin-left: 3px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+   .popUpContainerSecond{
+    flex-direction: column;
+   }
+
+   .popUpContainerLeft{
+    flex-direction: column;
+   }
+
+   .popUpconatinerImg{
+    background-size: contain;
+   }
+
+}
+
+
+
+
