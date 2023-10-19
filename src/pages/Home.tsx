@@ -11,7 +11,7 @@ enum Theme {
 }
 
 const Home = () => {
-  const [loading, setLoading] = useState<boolean>(false);
+  // const [loading, setLoading] = useState<boolean>(false);
   const [pageNo, setPageNo] = useState<number>(1);
   const [total, setTotal] = useState<number>(1000);
   const [imagesData, setImagesData] = useState<IImageData[]>([]);
@@ -62,7 +62,7 @@ const Home = () => {
     const timeOut = setTimeout(() => {
       if (keyword !== "") {
         (async () => {
-          await fetchData(setLoading, setImagesData, keyword,setTotal,pageNo);
+          await fetchData(setImagesData, keyword,setTotal,pageNo);
         })();
       }
     }, 2000); // minimum wat time will be 2 sec

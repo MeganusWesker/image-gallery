@@ -7,14 +7,13 @@ const PopUp = ({
   name,
   likedByUser,
   likes,
-  id,
   profilePic,
   setOpen,
   instaGramUserName,
   twitterUserName,
   tags,
   height,
-  width
+  width,
 }: IpopUpProps) => {
   console.log(tags);
 
@@ -25,10 +24,11 @@ const PopUp = ({
   // }}
 
   return (
-    <div className="popUpContainer"
-    style={{
-      width:height > width ?"30%" :"60%",
-    }}
+    <div
+      className="popUpContainer"
+      style={{
+        width: height > width ? "40%" : "60%",
+      }}
     >
       {/* <img src={image} alt="img" /> */}
 
@@ -36,11 +36,37 @@ const PopUp = ({
         className="popUpconatinerImg"
         style={{
           backgroundImage: `url(${image})`,
-          height:height >3000 ? "90%" :"60%",
-          width:"100%",
-          backgroundSize:"cover"
+          // height: height > 3000 ? "90%" : "60%",
+          // width: "100%",
+           backgroundSize: "cover",
         }}
-      ></div>
+      >
+        <div className="share-download-conatiner centerItemsVertically">
+          <div className="centerItemsVertically share-download-conatiner-first">
+            <button  className="centerItemsVertically">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentcolor"
+              >
+                <path d="M13.1202 17.0228L8.92129 14.7324C8.19135 15.5125 7.15261 16 6 16C3.79086 16 2 14.2091 2 12C2 9.79086 3.79086 8 6 8C7.15255 8 8.19125 8.48746 8.92118 9.26746L13.1202 6.97713C13.0417 6.66441 13 6.33707 13 6C13 3.79086 14.7909 2 17 2C19.2091 2 21 3.79086 21 6C21 8.20914 19.2091 10 17 10C15.8474 10 14.8087 9.51251 14.0787 8.73246L9.87977 11.0228C9.9583 11.3355 10 11.6629 10 12C10 12.3371 9.95831 12.6644 9.87981 12.9771L14.0788 15.2675C14.8087 14.4875 15.8474 14 17 14C19.2091 14 21 15.7909 21 18C21 20.2091 19.2091 22 17 22C14.7909 22 13 20.2091 13 18C13 17.6629 13.0417 17.3355 13.1202 17.0228ZM6 14C7.10457 14 8 13.1046 8 12C8 10.8954 7.10457 10 6 10C4.89543 10 4 10.8954 4 12C4 13.1046 4.89543 14 6 14ZM17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8ZM17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z"></path>
+              </svg>
+              <p>share</p>
+            </button>
+
+            <button  className="centerItemsVertically">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentcolor">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z"></path>
+              </svg>
+              <p>info</p>
+            </button>
+          </div>
+
+          <button>Download Image</button>
+        </div>
+
+
+      </div>
 
       <button onClick={() => setOpen(false)} className="closebtn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -87,7 +113,11 @@ const PopUp = ({
 
           <div className="popUpContainerRight centerItemsVertically">
             <button>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentcolor">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentcolor"
+              >
                 {likedByUser ? (
                   <path d="M2 8.99997H5V21H2C1.44772 21 1 20.5523 1 20V9.99997C1 9.44769 1.44772 8.99997 2 8.99997ZM7.29289 7.70708L13.6934 1.30661C13.8693 1.13066 14.1479 1.11087 14.3469 1.26016L15.1995 1.8996C15.6842 2.26312 15.9026 2.88253 15.7531 3.46966L14.5998 7.99997H21C22.1046 7.99997 23 8.8954 23 9.99997V12.1043C23 12.3656 22.9488 12.6243 22.8494 12.8658L19.755 20.3807C19.6007 20.7554 19.2355 21 18.8303 21H8C7.44772 21 7 20.5523 7 20V8.41419C7 8.14897 7.10536 7.89462 7.29289 7.70708Z"></path>
                 ) : (
@@ -105,7 +135,7 @@ const PopUp = ({
 
           <div className="tagWrapper">
             {tags.length > 0 ? (
-              tags.map((item, index) => (
+              tags.map((item) => (
                 <div className="tagsContainer" key={item.title}>
                   {item.title}
                 </div>

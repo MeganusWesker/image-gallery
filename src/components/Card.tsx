@@ -7,7 +7,6 @@ const Card = ({
   name,
   likedByUser,
   likes,
-  id,
   selectCard,
   profilePic,
   index,
