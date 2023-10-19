@@ -1,6 +1,4 @@
 import axios from "axios";
-
-
 export const server = "https://api.unsplash.com/search/photos";
 
 export const fetchData = async (
