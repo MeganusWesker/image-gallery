@@ -71,15 +71,15 @@ const Navbar = ({
           <ul id="navbarList">
             <li>
               {" "}
-              <Link to="about">Explore</Link>
+              <Link to="/">Explore</Link>
             </li>
             <li>
               {" "}
-              <Link to="about">Collection</Link>
+              <Link to="/">Collection</Link>
             </li>
             <li>
               {" "}
-              <Link to="about">Community</Link>
+              <Link to="/">Community</Link>
             </li>
           </ul>
 
